@@ -1,2 +1,26 @@
 .topBox {
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .list {
+    .listItem {
+      .user {
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .userTexts {
+          .username {
+          }
+          .email {
+          }
+        }
+      }
+      .amount {
+      }
+    }
+  }
 }
