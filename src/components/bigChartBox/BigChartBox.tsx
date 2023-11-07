@@ -55,6 +55,7 @@ const data = [
 ];
 
 const BigChartBox = () => {
+  // ddd
   return (
     <div className="bigChartBox">
       <h1>수익 분석</h1>
