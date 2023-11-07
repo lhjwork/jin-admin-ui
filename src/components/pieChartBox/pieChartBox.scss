@@ -1,2 +1,39 @@
 .pieChartBox {
+  // height: 100%;
+  //  box 전체 차지 -> 그래야 space-between을 박스 전체로 먹일 수 있다.
+  // 안그러면 자식 요소에 의해서 box크기가 정해짐
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .chart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 14px;
+    .option {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      .title {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }
