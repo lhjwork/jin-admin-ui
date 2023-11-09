@@ -1,6 +1,11 @@
 import React from "react";
 import "./dataTable.scss";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  GridColDef,
+  GridToolbar,
+  GridValueGetterParams,
+} from "@mui/x-data-grid";
 
 const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 90 },
@@ -49,6 +54,7 @@ const DataTable = () => {
   return (
     <div className="dataTable">
       <DataGrid
+        className="dataGrid"
         rows={rows}
         columns={columns}
         initialState={{
@@ -56,6 +62,14 @@ const DataTable = () => {
             paginationModel: {
               pageSize: 5,
             },
+          },
+        }}
+        // 검색 기능 : slotProps
+        slots={{ toolbar: GridToolbar }}
+        slotProps={{
+          toolbar: {
+            showQuickFilter: true,
+            quickFilterProps: { debounceMs: 500 },
           },
         }}
         pageSizeOptions={[5]}
