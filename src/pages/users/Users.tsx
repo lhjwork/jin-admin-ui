@@ -15,40 +15,59 @@ const columns: GridColDef[] = [
     },
   },
   {
-    field: "actions",
-    headerName: "관리",
-    width: 100,
-    renderCell: (params) => {
-      return (
-        <div className="action">
-          <div className="view">View</div>
-          <div className="delete">Delete</div>
-        </div>
-      );
-    },
-  },
-  {
-    field: "status",
-    headerName: "Status",
-    width: 100,
-    type: "boolean",
-  },
-  {
     field: "name",
     headerName: "이름",
     width: 150,
     editable: true,
   },
+  // {
+  //   field: "actions",
+  //   headerName: "관리",
+  //   width: 100,
+  //   renderCell: (params) => {
+  //     return (
+  //       <div className="action">
+  //         <div className="view">View</div>
+  //         <div className="delete">Delete</div>
+  //       </div>
+  //     );
+  //   },
+  // },
   {
-    field: "age",
-    headerName: "나이",
-    type: "number",
-    width: 110,
-    renderCell: (params) => {
-      return params.value || "ㅡ";
-    },
+    field: "email",
+    headerName: "email",
+    width: 300,
     editable: true,
   },
+  {
+    field: "phone",
+    headerName: "phone",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "createdAt",
+    headerName: "createdAt",
+    width: 200,
+    editable: true,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 150,
+    type: "boolean",
+  },
+
+  // {
+  //   field: "age",
+  //   headerName: "나이",
+  //   type: "number",
+  //   width: 110,
+  //   renderCell: (params) => {
+  //     return params.value || "ㅡ";
+  //   },
+  //   editable: true,
+  // },
   // {
   //   field: "fullName",
   //   headerName: "Full name",
@@ -66,8 +85,8 @@ const Users = () => {
       <div className="info">
         <h1>Users</h1>
         <button>Add New User</button>
-        <DataTable slug="users" columns={columns} rows={userRows} />
       </div>
+      <DataTable slug="users" columns={columns} rows={userRows} />
     </div>
   );
 };
