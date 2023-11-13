@@ -16,10 +16,10 @@ type Props = {
   title: string;
   info: object;
   chart?: {
-    datakeys: { name: string; color: string }[];
+    dataKeys: { name: string; color: string }[];
     data: object[];
   };
-  activities?: { time: string; text: string };
+  activities?: { time: string; text: string }[];
 };
 
 const Single = (props: Props) => {
@@ -60,7 +60,7 @@ const Single = (props: Props) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                {props.chart.datakeys.map((dataKey) => (
+                {props.chart.dataKeys.map((dataKey) => (
                   <Line
                     type="monotone"
                     dataKey={dataKey.name}
@@ -76,32 +76,18 @@ const Single = (props: Props) => {
       </div>
       <div className="activities">
         <h2>최신 활동들</h2>
-        <ul>
-          <li>
-            <div>
-              <p>Jhone Doe purchased Playstation 5 Digital Edition</p>
-              <time>3 day ago</time>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Jhone Doe purchased Playstation 5 Digital Edition</p>
-              <time>3 day ago</time>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Jhone Doe purchased Playstation 5 Digital Edition</p>
-              <time>3 day ago</time>
-            </div>
-          </li>
-          <li>
-            <div>
-              <p>Jhone Doe purchased Playstation 5 Digital Edition</p>
-              <time>3 day ago</time>
-            </div>
-          </li>
-        </ul>
+        {props.activities && (
+          <ul>
+            {props.activities.map((activity) => (
+              <li key={activity.text}>
+                <div>
+                  <p>{activity.text}</p>
+                  <time>{activity.time}</time>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
