@@ -14,7 +14,7 @@ import Menu from "./components/menu/Menu";
 import Login from "./pages/login/Login";
 import "./styles/global.scss";
 import User from "./pages/user/User";
-import Product from "./pages/product/product";
+import Product from "./pages/product/Product";
 
 function App() {
   const Layout = () => {
@@ -43,7 +43,7 @@ function App() {
         { path: "/users", element: <Users /> },
         { path: "/products", element: <Products /> },
         { path: "/users/:id", element: <User /> },
-        { path: "/product/:id", element: <Product /> },
+        { path: "/products/:id", element: <Product /> },
       ],
     },
     {

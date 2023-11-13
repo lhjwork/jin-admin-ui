@@ -80,6 +80,7 @@ const Single = () => {
             </div>
           </div>
         </div>
+        <hr />
         <div className="chart">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart
