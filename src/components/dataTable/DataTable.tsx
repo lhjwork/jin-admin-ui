@@ -8,12 +8,17 @@ import {
 } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 
+import { useQueryClient, useMutation } from "@tanstack/react-query";
 type Props = {
   columns: GridColDef[];
   rows: object[];
   slug: string;
 };
 const DataTable = (props: Props) => {
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({});
+
   const handleDelete = (id: number) => {
     //axios.delete(`/api/${props.slug}/${id}`)
     console.log(id + "han been deleted");
