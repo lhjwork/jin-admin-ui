@@ -1,0 +1,32 @@
+.single {
+  display: flex;
+
+  .view {
+    flex: 1;
+    .info {
+      .topInfo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 20px;
+          object-fit: cover;
+        }
+
+        h1 {
+          font-weight: 500;
+        }
+      }
+      .details {
+        font-size: 18px;
+      }
+      .chart {
+      }
+    }
+  }
+  .activities {
+    flex: 1;
+  }
+}
