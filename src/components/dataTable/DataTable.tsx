@@ -14,13 +14,23 @@ type Props = {
   rows: object[];
   slug: string;
 };
+//21759
 const DataTable = (props: Props) => {
   const queryClient = useQueryClient();
 
-  const mutation = useMutation({});
+  const mutation = useMutation({
+    mutationFn: (id: number) => {
+      return fetch(`http://localhost:8800/api/${props.slug}/${id}`, {
+        method: "delete",
+      });
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries([`all${props.slug}`]);
+    },
+  });
 
   const handleDelete = (id: number) => {
-    //axios.delete(`/api/${props.slug}/${id}`)
+    mutation.mutate(id);
     console.log(id + "han been deleted");
   };
 

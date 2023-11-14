@@ -25,13 +25,13 @@ const columns: GridColDef[] = [
     field: "color",
     type: "string",
     headerName: "Color",
-    width: 150,
+    width: 100,
   },
   {
     field: "price",
     type: "string",
     headerName: "Price",
-    width: 200,
+    width: 150,
   },
   {
     field: "producer",
@@ -42,7 +42,7 @@ const columns: GridColDef[] = [
   {
     field: "createdAt",
     headerName: "Created At",
-    width: 200,
+    width: 150,
     type: "string",
   },
   {
