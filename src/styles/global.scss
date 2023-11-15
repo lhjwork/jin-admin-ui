@@ -23,27 +23,31 @@ a {
 
   // 화면 싸이즈 별 break point를 적용해서 UI 작업시에 즉각적으로 작업이 가능하도록 한다.
 
-  @include xxl {
-    background-color: rgba(255, 0, 0, 0.101);
-  }
-  @include xl {
-    background-color: rgba(106, 255, 0, 0.101);
-  }
-  @include lg {
-    background-color: rgba(0, 238, 255, 0.101);
-  }
-  @include md {
-    background-color: rgba(174, 123, 203, 0.101);
-  }
-  @include sm {
-    background-color: rgba(195, 203, 177, 0.101);
-  }
+  // @include xxl {
+  //   background-color: rgba(255, 0, 0, 0.101);
+  // }
+  // @include xl {
+  //   background-color: rgba(106, 255, 0, 0.101);
+  // }
+  // @include lg {
+  //   background-color: rgba(0, 238, 255, 0.101);
+  // }
+  // @include md {
+  //   background-color: rgba(174, 123, 203, 0.101);
+  // }
+  // @include sm {
+  //   background-color: rgba(195, 203, 177, 0.101);
+  // }
 }
 
 .menuContainer {
   width: 250px;
   padding: 5px 20px;
   border-right: 2px solid $soft-bg;
+
+  @include lg {
+    width: max-content;
+  }
 }
 
 .contentContainer {
