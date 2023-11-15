@@ -4,6 +4,9 @@ $lg: 1024px;
 $xl: 1200px;
 $xxl: 1400px;
 
+// 22253
+// mixin : 재사용할 CSS 스타일 그룹 선언을 정의 -> 호출 시 : include
+// max-width : 변수로 지정된 최대 폭까지 해당 스타일이 적용되도록 하는 조건
 @mixin sm {
   @media screen and (max-width: ($sm)) {
     @content;
@@ -11,24 +14,25 @@ $xxl: 1400px;
 }
 
 @mixin md {
-  @media screen and (max-width: ($sm)) {
+  @media screen and (max-width: ($md)) {
     @content;
   }
 }
 
 @mixin lg {
-  @media screen and (max-width: ($sm)) {
+  @media screen and (max-width: ($lg)) {
     @content;
   }
 }
 
 @mixin xl {
-  @media screen and (max-width: ($sm)) {
+  @media screen and (max-width: ($xl)) {
     @content;
   }
 }
+
 @mixin xxl {
-  @media screen and (max-width: ($sm)) {
+  @media screen and (max-width: $xxl) {
     @content;
   }
 }
