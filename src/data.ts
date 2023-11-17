@@ -309,18 +309,6 @@ export const barChartBoxVisit = {
   ],
 };
 
-const rows = [
-  { id: 1, name: "Snow Jon", age: 35, status: true },
-  { id: 2, name: "이해준", age: 42, status: false },
-  { id: 3, name: "Lannister Jaime", age: 45 },
-  { id: 4, name: "김상준", age: 16 },
-  { id: 5, name: "Targaryen", age: null },
-  { id: 6, name: "Melisandre", age: 150 },
-  { id: 7, name: "김동원", age: 44 },
-  { id: 8, name: "Frances", age: 36 },
-  { id: 9, name: "김명진", age: 65 },
-];
-
 export const userRows = [
   {
     id: 1,

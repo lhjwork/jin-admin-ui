@@ -1,7 +1,7 @@
 import React from "react";
 import "./add.scss";
 import { GridColDef } from "@mui/x-data-grid";
-import { useQueryClient, useMutation } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 type Props = {
   slug: string;
   columns: GridColDef[];
@@ -9,8 +9,6 @@ type Props = {
 };
 
 const Add = (props: Props) => {
-  const queryClient = useQueryClient();
-
   const mutation = useMutation({
     mutationFn: () => {
       return fetch(`http://localhost:8800/api/${props.slug}s`, {
@@ -31,7 +29,8 @@ const Add = (props: Props) => {
       });
     },
     onSuccess: () => {
-      queryClient.invalidateQueries([`all${props.slug}s`]);
+      console.log("queryClient.invalidateQueries");
+      // queryClient.invalidateQueries([`all${props.slug}s`]);
     },
   });
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./chartBox.scss";
 import { Link } from "react-router-dom";
 import { ResponsiveContainer, LineChart, Line, Tooltip } from "recharts";
